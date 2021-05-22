@@ -8,7 +8,7 @@ echo "Creating Test script"
 ================================================================
 echo -p "Provide File name="
 read -r file
-if [ -n $file ];
+if [ -z $file ];
 then
 echo "provide valied input"
 cd test
