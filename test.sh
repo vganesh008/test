@@ -22,6 +22,7 @@ then
 echo "file is avilable on path"
 else 
 echo "let me create new file"
+touch $file.sh
 fi
 
 
