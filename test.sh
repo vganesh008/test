@@ -1,21 +1,27 @@
 #!/bin/bash
 #################################################################
 #Created by:=Ganesh Reddy                                       #
-#Date on created=$(daate)
-#Date on Modified =$(date)
+#Date on created=
+echo "created date=`date`
+#Date on Modified =
+echo " modified date =`date`
 
 echo "Creating Test script"
 ================================================================
-echo -p "Provide File name="
+echo "Provide File name"
 read -r file
 if [ -z $file ];
 then
 echo "provide valied input"
-cd test
-elif [ -f /root/test/test.txt ];
+fi
+
+cd test/
+
+if [ -f /root/test/$file ];
 then
 echo "file is avilable on path"
-else "let me create new file"
+else 
+echo "let me create new file"
 fi
 
 
