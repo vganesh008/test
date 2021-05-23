@@ -23,3 +23,4 @@ else
     touch $file.sh
 fi
 echo "code was done"
+echo "my name is reddy"
