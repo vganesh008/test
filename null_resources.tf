@@ -25,8 +25,7 @@ resource "null_resource" "null" {
             host = "${element(aws_instance.ec2.*.public_ip, count.index)}"
         }
     }
-    #provisioner "local-exec" {
-    #    command = <<EOH
-    #    echo "${element(aws_instance.ec2.*.public_ip, count.index)}" >> detaails.txt 
-    #}
+    provisioner "local-exec" {
+        command = echo "${element(aws_instance.ec2.*.public_ip, count.index)}" >> detaails.txt 
+    }
 }
